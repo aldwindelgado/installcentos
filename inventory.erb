@@ -8,14 +8,14 @@ deployment_type=origin
 openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 containerized=true
 openshift_release=v1.4
-openshift_image_tag=v1.4.0
-openshift_public_hostname=console.aldwindelgado.io
-openshift_master_default_subdomain=apps.console.aldwindelgado.io
+openshift_image_tag=v1.4.1
+openshift_public_hostname=openshift.console.devkinetics.com
+openshift_master_default_subdomain=openshift.apps.console.devkinetics.com
 openshift_hosted_metrics_deploy=false
 
 
 [masters]
-console.aldwindelgado.io openshift_schedulable=true
+openshift.console.devkinetics.com openshift_schedulable=true
 
 [nodes]
-console.aldwindelgado.io openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=true
+openshift.console.devkinetics.com openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=true
